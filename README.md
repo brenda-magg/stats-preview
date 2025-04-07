@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Stats preview card component](https://brenda-magg.github.io/stats-preview/)
 
 ## My process
 
@@ -52,4 +52,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-- I follow KimDoesCode youtube video for this challenge.
+- I follow [KimDoesCode](https://www.youtube.com/watch?v=-8zFGXwGjw8) youtube video for this challenge.
