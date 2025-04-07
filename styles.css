@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+    --mainBack: hsl(233, 47%, 7%);
+    --cardBack: hsl(244, 38%, 16%);
+    --softV: hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%); /* For main heading, stats*/
+    --softWhite: hsla(0, 0%, 100%, 0.6); /* main paragraph*/
+    --softWhitee: hsla(0, 0%, 100%, 0.75);/* stat headings*/
+
+    --headingFont: 'Inter', sans-serif;
+    --bodyFont: 'Lexend Deca', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    line-height: 1.1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+body {
+    font-family: var(--bodyFont);
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--softWhite);
+    background-color: var(--mainBack);
+}
+
+/* helper classes, repeated classes*/
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.title, .stat-num {
+    font-family: var(--headingFont);
+    font-weight: 700;
+    font-size: 2em;
+    color: var(--White);
+}
+
+.title span {
+    color: var(--softV);
+}
+
+.description {
+    font-size: 0.95em;
+}
+
+.stat-num {
+    font-size: 1.55em;
+}
+
+.stat-desc {
+    text-transform: uppercase;
+    font-family: var(--bodyFont);
+    font-size: 0.85em;
+    margin-top: 0.5em;
+}
+
+.wrapper {
+    justify-content: center;
+    min-height: 97dvh;
+}
+
+.card-container {
+    max-width: 67em;
+    border-radius: .5em;
+    overflow-y: hidden;
+    background-color: var(--cardBack);
+}
+
+.card-container * {
+    flex-basis: 50%; /*for the container to occupied the same space*/
+
+}
+
+.card-img {
+    position: relative;
+}
+
+.card-img::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: hsla(277, 94%, 21%, 0.65);
+    position: absolute;
+    inset: 0;
+}
+
+.card-info {
+    padding: 4em;
+}
+
+.card-info > * + * { /*This selects all the elements inside of it except the first one*/
+    margin-top: 2em;
+}
+
+.stat-item {
+    gap: 1em;
+    margin-top: 3em;
+}
+
+.attribution {
+    font-family: monospace;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* MEDIA QUERIES*/
+@media (max-width:800px) {
+    .card-container {
+        width: 90%;
+        margin: 4em 0;
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:500px) {
+    .title {
+        font-size: 1.75em;
+    }
+    .card-info {
+        padding: 2em 1.5em;
+    }
+
+    .stat-num {
+        font-size: 1.5em;
+    }
+
+    .stat-desc {
+        font-size: 0.85em;
+    }
+}
+
